@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://10.2.2.56:3009/css/style.css">
+	<script src="http://10.2.2.56:3009/assets/require.js" data-main="http://10.2.2.56:3009/assets/cxmain.js"></script>
+</head>
+<body>
+	<div class="ch-model">
+		<div ng-controller="chatCtrl">
+			<div class="ch-model-header">
+				<a class="header-title"><label>RK - Chat</label></a>
+				<a class="btn-close" ng-click="minimize = !minimize">
+					<span>_</span>
+				</a>
+			</div>
+			<div class="ch-model-body" ng-show="minimize">
+				welcome to start chat
+			</div>
+			<div class="ch-model-footer" ng-show="minimize">
+				<form action="javascript:void(0)" ng-submit="submitChat()" ng-model="chat_content">
+					<div class="form-control-group">
+						<div class="form-control">
+							<input type="text" ng-model="chat_content.text">
+						</div>
+						<div class="form-control">
+							<button type="submit">Send</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
